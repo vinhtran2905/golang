@@ -1,3 +1,3 @@
-#First homework for GO learning
+# First homework for GO learning
 Hello world
-Using TDD and test table 
+Using TDD and test table
