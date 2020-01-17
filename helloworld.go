@@ -13,7 +13,7 @@ func main() {
 
 func Hello(str string) string {
 	if str == "" {
-		str = "world golang"
+		str = "golang world"
 	}
 	return helloPrefix + str
 }
