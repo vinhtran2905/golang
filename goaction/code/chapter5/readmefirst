@@ -1,0 +1,4 @@
+Chapter 5: Go's type system
+Go is a statically typed programming languauge which is the compiler always wants to know what the type is for every value in the program.
+When the compiler knows the type information ahead of time, it can help to make sure that the program is working with values in a safe way. 
+This helps to reduce potential memory corruption and bugs and probvides the compiler the opportunity to produce more performant code
