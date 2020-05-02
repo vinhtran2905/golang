@@ -40,7 +40,7 @@ func main() {
 	user3 := user{"user3", "u3@gmail.com"}
 	user3.notify()
 
-	//thanks to inner type promotio, the notify method can also be accessed directly from the ad variable
+	//thanks to inner type promotion, the notify method can also be accessed directly from the ad variable
 	admin1.notify()
 
 }
