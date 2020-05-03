@@ -1,12 +1,12 @@
 package vinh
 
 //unexported identifer since it started with the lower case
-type alertCounter int
+type newalertCounter int
 
-// New creates and returns values of the unexported
+// NewAlertCounter creates and returns values of the unexported
 // type alertCounter.
-func New(value int) alertCounter {
-	return alertCounter(value)
+func NewAlertCounter(value int) newalertCounter {
+	return newalertCounter(value)
 }
 
 //Newtimer ...
