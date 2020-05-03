@@ -11,6 +11,6 @@ func main() {
 	counter := vinh.New(4)
 	fmt.Printf("counter: %v\n", counter)
 
-	t := vinh.Timer(5.6)
+	t := vinh.Newimer(4)
 	fmt.Printf("timer %v\n", t)
 }
