@@ -3,7 +3,7 @@ package vinh
 //unexported identifer since it started with the lower case
 type alertCounter int
 
-// NewAlertCounter creates and returns values of the unexported
+// New creates and returns values of the unexported
 // type alertCounter.
 func New(value int) alertCounter {
 	return alertCounter(value)
@@ -14,6 +14,6 @@ func New(value int) alertCounter {
 type interalTimer int
 
 //Newtimer ...
-func Newtimer(value int) interalTimer {
+func Newtimer(value float64) interalTimer {
 	return interalTimer(value)
 }
