@@ -1,8 +1,12 @@
-//The ability to apply visibility ruls to the identifiers you declare is critical for good API design.
-//Go suports the exporting of identifiers from a package to provide this functionality
 package main
 
+import (
+	"fmt"
+
+	"gihub.com/vinhtran2905/golang/goaction/code/chapter5/counters/"
+)
+
 func main() {
-	counter := counters.alertCounter(10)
-	fmt.Printf("Counter:: %d\n",counter)
+	counter := counters.AlertCounter(10)
+	fmt.Printf("Counter: %v\n", counter)
 }

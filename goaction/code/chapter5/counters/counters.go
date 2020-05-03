@@ -1,3 +1,3 @@
-pacage counters
+package counters
 
-type alertCounter int
+type AlertCounter int
