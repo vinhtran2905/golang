@@ -11,4 +11,4 @@ func New(value int) alertCounter {
 
 //Newtimer ...
 //identifer is exported since it defined with the Upper case
-type Newtimer float64
+type Newtimer int
