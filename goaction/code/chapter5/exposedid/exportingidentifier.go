@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"gihub.com/vinhtran2905/golang/goaction/code/chapter5/counters/"
+	"github.com/vinhtran2905/golang/goaction/code/chapter5/counters/"
 )
 
 func main() {
