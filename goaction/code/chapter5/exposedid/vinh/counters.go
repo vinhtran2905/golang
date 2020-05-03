@@ -9,6 +9,11 @@ func New(value int) alertCounter {
 	return alertCounter(value)
 }
 
-//Newtimer ...
+//interalTimer ...
 //identifer is exported since it defined with the Upper case
-type Newtimer int
+type interalTimer int
+
+//Newtimer ...
+func Newtimer(value int) interalTimer {
+	return interalTimer(value)
+}

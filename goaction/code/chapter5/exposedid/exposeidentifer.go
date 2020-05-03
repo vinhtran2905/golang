@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	counter := vinh.NewAlertCounter(4)
+	counter := vinh.New(4)
 	fmt.Printf("counter: %v\n", counter)
 
 	// t := vinh.Newtimer(5.4)
