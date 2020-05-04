@@ -14,7 +14,9 @@ func main() {
 	// t := vinh.Newtimer(5.4)
 	// fmt.Printf("timer %v\n", t)
 
-	t := vinh.Newtimer(5.6)
+	t := vinh.Newtimer(12.33)
 	fmt.Printf("counter: %v\n", t)
 
+	ns := vinh.NewString("this is export identifer")
+	fmt.Printf("new string value is : %v\n", ns)
 }
