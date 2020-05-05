@@ -1,0 +1,33 @@
+Concurrency
+
+There are times when executing multiple tasks concurrently has greater benefit. One example is with a web service that can receive multiple request for data on individual sockets at the same time.
+ Each socket request is unique and can be independently processed from any other. Having the ability to execute requests concurrently can dramatically improve the performance of this type of system.
+ Concurrency in Go is the ability for functions to run independent of each other. When a function is created as a goroutine, it's treated as an independent unit of work that gets scheduled and then executed on an available logical processor.
+ Concurrency synchronization comes from a paradigm called communicating sequential processes or CSP. CSP is a message passing model that works by communicating data between goroutines intead of locking data to synchronize access. The key data type for synchronizing and passing messages between goroutines is called a channel.
+
+ Concurrency vs Parallelism
+    Process maintains a memory address space, handles to files, and devices. Threads for a running application. The OS scheduler decides which threads will receive time on any given CPU.
+    The Go runtime schedules goroutines to run in a logical processor that is bound to a single operating system thread. When goroutins are runable, they are added to a logical processor's run queue.
+    When a goroutine makes a blocking syscall, the scheduler will detach the thread from the processor and create a new thread to service that processor
+    A Thread is a path of execution that's scheduled by the operating system to run the code that you write in your functions. Each process contains at least one thread and the initial thread for each process is called the main thread. When the main thread terminates, the application terminates because this path of the execution is the origin for the application.
+    The operating system schedules threads to run against physical processors and the Go runtime scchedules goroutings to run against logical processors. Each logical processor is individually bound to a single operating system thread. Each logical processor is individually bound to a single operating system thread. These logical processors are used to executed all the goroutins that are created.
+
+    Concurrency is not parallelism. Parallelism can only be achieved when multiple pieces of code are executing simultaneously against different physical processors. Parallelism is about doing a lot of things at once. Concurrency is about managing a lot of things at once.
+
+    If you want to run goroutines in parallel, you must use more than one logical processor. When there are multiple logical processors, the scheduler will evenly distribute goroutines between the logical processors. This will result in goroutinges running on different threads. But to have true parallel you still need to run your program on a machines with multiple physical processors. If not  then the goroutines will be running concurrently against a single physical processor, even though the Go runtime is using multiple threads.
+
+    Different between running goroutines concurrently against a single logical processor and concurrenyly in parallel against two logical processors.
+
+            Concurrency                                 Parallelism
+
+            Thread M2                                   Thread M2                               Thread M3
+                |                                           |                                       |
+            Processor --- G5                            Processor --- G6                           Processor --- G7
+                P0          |                               P0         |                              P1          |
+                |          G6                               |           G8                             |           G9
+                G4          |                               G4          |                               G5          
+                            G7                                          G10                                        
+
+
+
+
